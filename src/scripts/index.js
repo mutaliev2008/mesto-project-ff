@@ -2,11 +2,7 @@
 import "../pages/index.css";
 import { deleteCard, createCard, likeTheCard } from "./card.js";
 import { openModule, closeModule, closeWithOverlay } from "./modal.js";
-import {
-  validationConfig,
-  clearValidation,
-  enableValidation,
-} from "./validation.js";
+import { clearValidation, enableValidation } from "./validation.js";
 
 import {
   getUserInfo,
@@ -16,11 +12,14 @@ import {
   upgradeAvatar,
 } from "./api.js";
 
-// getUserInfo().then((userData) => {
-//   titleProfile.textContent = userData.name;
-//   descriptionProfile.textContent = userData.about;
-//   profileImage.style.backgroundImage = "url('" + userData.avatar + "')";
-// });
+const validationConfig = {
+  formSelector: ".popup__form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
+};
 
 //поиск DOM-элементов
 const formNewPlace = document.forms["new-place"];
@@ -148,13 +147,13 @@ function creatingNewCards(evt) {
 
   addingNewCard(InputCardNameValue, InputUrlValue)
     .then((card) => {
-      const newCard = createCard(
+      const newCard = createCard({
         card,
         deleteCard,
         likeTheCard,
         openImg,
-        userId
-      );
+        userId,
+      });
       cardContainer.prepend(newCard);
       closeModule(popupNewCard);
       evt.target.reset();
@@ -197,13 +196,13 @@ function fillingInTheCards(cardList, userId) {
 }
 
 function insertCard(card, deleteCard, likeTheCard, openImg, userId) {
-  const cardElement = createCard(
+  const cardElement = createCard({
     card,
     deleteCard,
     likeTheCard,
     openImg,
-    userId
-  );
+    userId,
+  });
   cardContainer.append(cardElement);
 }
 
