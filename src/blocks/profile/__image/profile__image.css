@@ -9,6 +9,26 @@
   margin: 0 29px 0 0;
 }
 
+.profile__image-overlay {
+  position: absolute;
+  inline-size: 120px;
+  block-size: 120px;
+  background-image: url(..//..//..//images/edit-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: visibility 0.4s, opacity 0.4s;
+  visibility: hidden;
+}
+
+.profile__image_container:hover .profile__image-overlay {
+  visibility: initial;
+  opacity: 1;
+  transition: visibility 0.4s, opacity 0.4s;
+}
+
 @media screen and (max-width: 740px) {
   .profile__image {
     margin: 0 10px 0 0;
