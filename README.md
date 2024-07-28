@@ -11,7 +11,7 @@
 [](https://github.com/user-attachments/assets/a8bcad5c-8919-47dd-a1d1-f98821b9e103)  
 
 ## 2. Валидация формы «Новое место»  
-[](https://code.s3.yandex.net/web-developer/learning-materials/project/project-6-02-validation-add.mp4)
+[](https://github.com/user-attachments/assets/0f26f14c-ebcc-4a69-a3b6-6640a9dbc7ee)
 
 #### Технологий
 
