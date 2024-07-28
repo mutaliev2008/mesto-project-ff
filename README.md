@@ -4,7 +4,15 @@
 ## Описание  
 Проект представляет собой веб-приложение, которое позволяет пользователям обмениваться фотографиями мест.
 В приложении можно редактировать свой профиль, добавлять новые места, ставить лайки другим местам и удалять их.
-Создан с использованием HTML, CSS, Webpack и JavaScript.
+Создан с использованием HTML, CSS, Webpack и JavaScript.  
+
+## 1. Валидация формы «Редактировать профиль»  
+
+[](https://code.s3.yandex.net/web-developer/learning-materials/project/project-6-01-edit-validation.mp4)  
+
+
+## 2. Валидация формы «Новое место»  
+[](https://code.s3.yandex.net/web-developer/learning-materials/project/project-6-02-validation-add.mp4)
 
 #### Технологий
 
